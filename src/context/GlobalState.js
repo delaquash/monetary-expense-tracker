@@ -7,7 +7,7 @@ import AppReducer from './AppReducer';
 const InitialState = {
     transactions: [
         { id: 1, text: "Flower", amount: -200 },
-        { id: 1, text: "Income", amount: 300 },
+        { id: 2, text: "Income", amount: 300 },
         { id: 3, text: "Book", amount: -10 },
         { id: 4, text: "Camera", amount: 150 }
     ]
