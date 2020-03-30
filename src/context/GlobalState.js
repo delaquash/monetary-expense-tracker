@@ -1,16 +1,11 @@
 import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
-import MainTransaction from '../components/MainTransaction';
+// import MainTransaction from '../components/MainTransaction';
 
 // Initial State
 const InitialState = {
-    transactions: [
-        { id: 1, text: "Flower", amount: -200 },
-        { id: 2, text: "Income", amount: 300 },
-        { id: 3, text: "Book", amount: -10 },
-        { id: 4, text: "Camera", amount: 150 }
-    ]
-}
+    transactions: []
+};
 
 // Create context
 
@@ -33,7 +28,7 @@ export const GlobalProvider = ({ children }) => {
     function addTransaction (transaction) {
         dispatch({
             type: 'ADD_TRANSACTION',
-            payload: MainTransaction
+            payload: transaction
         });
     }
 
@@ -44,6 +39,6 @@ export const GlobalProvider = ({ children }) => {
     }}>
         {children}
     </GlobalContext.Provider>);
-}
+};
 
 

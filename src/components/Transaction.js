@@ -12,16 +12,16 @@ import { GlobalContext } from "../context/GlobalState";
         id: Math.floor(Math.random() * 100000000),
         text,
         amount: +amount
-     }
+     };
         addTransaction(newTransaction);
-     }
+     };
 
     return (
         <>
             <h3>Add New Transaction</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-control">
-                    <label htmlFor="text">Test</label>
+                    <label htmlFor="text" className="trans-det">Transaction Details</label>
                     <input type="text" value={text} onChange={(e) => setText(e.target.value)}
                      placeholder="Enter text here ..." />
                 </div>

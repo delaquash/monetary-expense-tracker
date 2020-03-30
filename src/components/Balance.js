@@ -7,8 +7,8 @@ const Balance = () => {
      const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
     return (
         <>
-            <h4>Your Balance</h4>
-            <h1 id="balance">NGN{total} </h1>
+            <h4 className="total_balance">Total Balance</h4>
+            <h1 id="balance" className="total_balance">NGN{total} </h1>
         </>
     )
 }
