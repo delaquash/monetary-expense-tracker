@@ -2,7 +2,7 @@
 // route Get /api/v1/transactions
 // Access Public
 
-exports.getTransaction = (req, res, next) => {
+exports.getTransactions = (req, res, next) => {
     res.send("GET Transaction");
 };
 
@@ -23,3 +23,4 @@ exports.deleteTransaction = (req, res, next) => {
     res.send("DELETE Transaction");
 };
 
+// module.exports= router;
