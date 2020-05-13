@@ -4,20 +4,22 @@ const dotenv = require('dotenv');
 const colors = require('colors');
 // morgan is for our log in
 const morgan = require('morgan');
-// const connectDB = require('./config/db');
+const connectDB = require('./config/db');
 
 
 dotenv.config({
     path: './config/config.env'
 });
 
-// connectDB();
+connectDB();
 const transaction = require('./routes/transaction');
 
 
 
 const app = express();
 
+// Body parser
+app.use(express.json);
 // app.get("/", (req, res) => res.send('Hello'));
 app.use('/api/v1/transactions', transaction);
 
