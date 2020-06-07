@@ -12,17 +12,14 @@ dotenv.config({
 });
 
 connectDB();
-const transaction = require('./routes/transaction');
-
-
-
+const transactions = require('./routes/transactions');
 const app = express();
 
-// Body parser
+// Body parser and middleware
 app.use(express.json);
 // app.get("/", (req, res) => res.send('Hello'));
-app.use('/api/v1/transactions', transaction);
+app.use('/api/v1/transactions', transactions);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, console.log(`Server running on ${process.env.NODE_ENV} mode on port ${PORT}`.green.bold));
+app.listen(PORT, console.log(`Server running on ${process.env.NODE_ENV} mode on port ${PORT}`.blue.bold));
