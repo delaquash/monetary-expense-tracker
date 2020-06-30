@@ -1,15 +1,22 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import {
+    numberWithCommas
+} from '../utils/format.jsx';
 
 const Balance = () => {
-     const { transactions } = useContext(GlobalContext);
-     const amounts = transactions.map(transaction=>transaction.amount)
-     const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
-    return (
-        <>
-            <h4 className="total_balance">Total Balance</h4>
-            <h1 id="balance" className="total_balance">NGN{total} </h1>
-        </>
+    const { transactions } = useContext(GlobalContext);
+    const amounts = transactions.map(transaction => transaction.amount)
+    const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+    return ( <
+        >
+        <
+        h4 className = "total_balance" > Total Balance < /h4> <
+        h1 id = "balance"
+        className = "total_balance" > NGN {
+            numberWithCommas
+                (total)
+        } < /h1> < / >
     )
 }
 
