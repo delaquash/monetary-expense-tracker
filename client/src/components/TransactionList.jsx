@@ -5,10 +5,10 @@ import { GlobalContext } from '../context/GlobalState';
 const TransactionList = (props) => {
   const { transactions, getTransactions } = useContext(GlobalContext);
   //   console.log(Transaction);
-  useEffect(() => {
-    getTransactions();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+//   useEffect(() => {
+//     getTransactions();
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
+//   }, []);
   return (
     <>
       <h3> History </h3>{' '}
